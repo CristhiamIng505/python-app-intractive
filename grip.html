@@ -1,0 +1,38 @@
+<div class="container">
+  <!-- Tabla de registros -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>Docente</th>
+        <th>Asignatura</th>
+        <th>Equipo</th>
+        <th>Hora Inicio</th>
+        <th>Hora Finaliza</th>
+        <th>Ubicación</th>
+        <th>Observaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se llenan los registros desde la BD -->
+    </tbody>
+  </table>
+
+  <!-- Formulario CRUD -->
+  <form action="crud.php" method="POST">
+    <input type="hidden" name="id" value="">
+    <input type="date" name="fecha" required>
+    <input type="text" name="docente" required>
+    <input type="text" name="asignatura" required>
+    <input type="text" name="equipo" required>
+    <input type="time" name="hora_inicio" required>
+    <input type="time" name="hora_finaliza" required>
+    <input type="text" name="ubicacion">
+    <textarea name="observaciones"></textarea>
+
+    <button type="submit" name="accion" value="guardar">Guardar</button>
+    <button type="submit" name="accion" value="actualizar">Actualizar</button>
+    <button type="submit" name="accion" value="eliminar">Eliminar</button>
+  </form>
+</div>
